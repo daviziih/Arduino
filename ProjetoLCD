@@ -1,0 +1,191 @@
+
+#include <LiquidCrystal.h>
+
+// initialize the library with the numbers of the interface pins
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+int led = 9;
+
+# define som 8
+
+//LiquidCrystal lcd(7,6,5,4,3,2);
+
+void setup(){
+  lcd.begin(16,2);
+  lcd.clear();
+  pinMode(som, OUTPUT);
+  pinMode(led, OUTPUT);
+}
+
+void loop(){
+  lcd.setCursor(1,0);
+  lcd.print("Seja Bem Vindo");
+  lcd.setCursor(2,1);
+  lcd.print("Davi Gabriel");
+  
+  for (int pos=0; pos <50; pos++){
+  	lcd.scrollDisplayLeft();
+    delay(100);
+  }
+  
+  lcd.clear();
+  delay(1000);
+  
+  lcd.setCursor(0,0);
+  lcd.print("Digite sua senha");
+  delay(1000);
+  
+  senha();
+  
+  lcd.noDisplay();
+  delay(100);
+  lcd.display();
+  delay(100);
+  lcd.noDisplay();
+  delay(100);
+  lcd.display();
+  delay(100);
+  lcd.noDisplay();
+  delay(100);
+  lcd.display();
+  delay(100);
+  lcd.noDisplay();
+  delay(100);
+  lcd.display();
+  delay(100);
+  lcd.noDisplay();
+  delay(100);
+  lcd.display();
+  delay(100);
+  lcd.noDisplay();
+  delay(100);
+  lcd.display();
+  delay(100);
+  
+  lcd.clear();
+  
+  lcd.setCursor(0,0);
+  lcd.print("Acesso Autorizado");
+  delay(1000);
+  
+  lcd.clear();
+  
+  lcd.setCursor(1,0);
+  lcd.print("Seja Bem Vindo");
+  lcd.setCursor(2,1);
+  lcd.print("Davi Gabriel");
+  
+  for (int pos=0; pos <50; pos++){
+  	lcd.scrollDisplayLeft();
+    delay(100);
+  }
+  
+  lcd.clear();
+  delay(1000);
+  
+  lcd.setCursor(0,0);
+  lcd.print("Digite sua senha");
+  delay(1000);
+  
+  senha2();
+  
+  lcd.noDisplay();
+  delay(100);
+  lcd.display();
+  delay(100);
+  lcd.noDisplay();
+  delay(100);
+  lcd.display();
+  delay(100);
+  lcd.noDisplay();
+  delay(100);
+  lcd.display();
+  delay(100);
+  lcd.noDisplay();
+  delay(100);
+  lcd.display();
+  delay(100);
+  lcd.noDisplay();
+  delay(100);
+  lcd.display();
+  delay(100);
+  lcd.noDisplay();
+  delay(100);
+  lcd.display();
+  delay(100);
+  
+  lcd.clear();
+  
+  lcd.setCursor(0,0);
+  lcd.print("Acesso Negado");
+  tone(som,200,2000);
+  
+  for (int i=0; i <20;i++){
+  	digitalWrite(led, HIGH);
+  	delay(400);
+  	digitalWrite(led, LOW);
+  	delay(400);
+  }
+  
+  lcd.clear();
+  
+}
+
+void senha() {
+  lcd.setCursor(15,5);
+  lcd.print("S");
+  delay(1000);
+  
+  lcd.setCursor(14,5);
+  lcd.print("SE");
+  delay(1000);
+  
+  lcd.setCursor(13,5);
+  lcd.print("SEN");
+  delay(1000);
+  
+  lcd.setCursor(12,5);
+  lcd.print("SENH");
+  delay(1000);
+  
+  lcd.setCursor(11,5);
+  lcd.print("SENHA");
+  delay(1000);
+  
+  lcd.setCursor(10,5);
+  lcd.print("SENHA1");
+  delay(1000);
+  
+  lcd.setCursor(9,5);
+  lcd.print("SENHA12");
+  delay(1000);
+  
+  lcd.setCursor(8,5);
+  lcd.print("SENHA123");
+  delay(1000);
+
+}
+
+void senha2() {
+  lcd.setCursor(15,5);
+  lcd.print("S");
+  delay(1000);
+  
+  lcd.setCursor(14,5);
+  lcd.print("SE");
+  delay(1000);
+  
+  lcd.setCursor(13,5);
+  lcd.print("SEN");
+  delay(1000);
+  
+  lcd.setCursor(12,5);
+  lcd.print("SENH");
+  delay(1000);
+  
+  lcd.setCursor(11,5);
+  lcd.print("SENHA");
+  delay(1000);
+
+}
+ 
