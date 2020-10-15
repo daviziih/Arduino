@@ -1,0 +1,47 @@
+int ledVermelho =13, ledAmarelo =12, ledVerde =11, ledVerdeP =9, ledVermelhoP =10;
+
+void setup() {
+	pinMode(ledVermelho, OUTPUT);
+  	pinMode(ledAmarelo, OUTPUT);
+  	pinMode(ledVerde, OUTPUT);
+  	pinMode(ledVerdeP, OUTPUT);
+  	pinMode(ledVermelhoP, OUTPUT);	
+    pinMode(8, INPUT);
+}
+
+void loop() {
+  	iniciar();
+}
+
+void iniciar() {
+  digitalWrite(ledVerdeP, HIGH);
+  	digitalWrite(ledVermelho, HIGH);
+  	delay(5000);
+  	digitalWrite(ledVerdeP, LOW);
+  
+  	for (int x =0; x<=5; x++) {
+    	digitalWrite(ledVermelhoP, HIGH);
+  		delay(500);
+  		digitalWrite(ledVermelhoP, LOW);
+  		delay(500);
+  	}
+  
+  	digitalWrite(ledVermelhoP, HIGH);
+  	digitalWrite(ledVermelho, LOW);
+             
+  	digitalWrite(ledVerde, HIGH);
+  	delay(4000);
+  	digitalWrite(ledVerde, LOW);
+  	delay(100);
+  
+  	digitalWrite(ledAmarelo, HIGH);
+  	delay(2000);
+  
+  	digitalWrite(ledAmarelo, LOW);
+ 	delay(100);
+  
+  	digitalWrite(ledVermelho, HIGH);
+ 	delay(1000);
+   	digitalWrite(ledVermelhoP, LOW);
+  	delay(100);
+}
